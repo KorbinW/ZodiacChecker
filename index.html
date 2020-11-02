@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>Zodiac Notes</title>
+    <script>
+
+      function fortune(){
+        var month = document.getElementById("userMonth").value;
+        var day = document.getElementById("userDay").value;
+          if(day==9 && month==4) {
+          var Alec = "You are kinda dumb¯|_(ツ)_/¯";
+          document.getElementById("message").innerHTML = Alec;
+          document.getElementById("symbol").innerHTML = "<img src='mikeW.jpg'>";
+        } else if((month == 1 &&  (day >= 20 && day <= 31)) || (month == 2 && (day >= 1  && day <= 20)))  {
+          var Aquarius = "You are Aquarius. Aquarius can be ridiculous, original, independent, tactful, sympathizing, shy and gentle.";
+          document.getElementById("message").innerHTML = Aquarius;
+          document.getElementById("symbol").innerHTML = "<img src='aquarius.jpg'>";
+        } else if((month == 2 && (day >= 19 && day <= 29)) || (month == 3 && (day >= 1 && day <= 20))) {
+          var Pisces = "You are Pisces. Pisces show a developed sense of pity and strong desire to help those who are ill and weak.";
+          document.getElementById("message").innerHTML = Pisces;
+          document.getElementById("symbol").innerHTML = "<img src='pisces.jpg'>";
+        } else if((month == 3 && (day >= 21 && day <=31)) || (month == 4 && (day >=1 && day <= 19))) {
+          var Aries = "You are Aries. People born under the Aries sign are friendly and physically vigorous.";
+          document.getElementById("message").innerHTML = Aries;
+          document.getElementById("symbol").innerHTML = "<img src='aries.jpg'>";
+        } else if((month == 4 && (day >= 20 && day <=30)) || (month == 5 && (day >=1 && day <= 20))) {
+          var Taurus = "You are Taurus. Someone that is Taurus loves thier house, the nature, flowers, painting and music.";
+          document.getElementById("message").innerHTML = Taurus;
+          document.getElementById("symbol").innerHTML = "<img src='taurus.jpg'>";
+        } else if((month == 5 && (day >= 21 && day <=31)) || (month == 6 && (day >=1 && day <= 20))) {
+          var Gemini = "You are Gemini. People belonging to Gemini sign are great idealists and always aspire to achieve their ideal.";
+          document.getElementById("message").innerHTML = Gemini;
+          document.getElementById("symbol").innerHTML = "<img src='gemini.jpg'>";
+        } else if((month == 6 && (day >= 21 && day <=30)) || (month == 7 && (day >=1 && day <= 22))) {
+          var Cancer = "You are Cancer. People of Cancer sign can keep secrets and sympathize with other people. Cancer sign heart is very gentle.";
+          document.getElementById("message").innerHTML = Cancer;
+          document.getElementById("symbol").innerHTML = "<img src='cancer.jpg'>";
+        } else if((month == 7 && (day >= 23 && day <=31)) || (month == 8 && (day >= 1 && day <= 22))) {
+          var Leo = "You are Leo.  Leo sign shows responsibility and concern to weak and helpless people.";
+          document.getElementById("message").innerHTML = Leo;
+          document.getElementById("symbol").innerHTML = "<img src='leo.jpg'>";
+        } else if((month == 8 && (day >= 23 && day <=31)) || (month == 9 && (day >= 1 && day <= 22))) {
+          var Virgo = "You are Virgo. People of the virgo sign love truthfulness, punctuality, economy and ingenuity.";
+          document.getElementById("message").innerHTML = Virgo;
+          document.getElementById("symbol").innerHTML = "<img src='virgo.jpg'>";
+        } else if((month == 9 && (day >= 23 && day <=30)) || (month == 10 && (day >= 1 && day <= 22))) {
+          var Libra = "You are Libra. People of the libra sign possesses fantastic ability to concentrate and penetrate deeply into the essence of subjects.";
+          document.getElementById("message").innerHTML = Libra;
+          document.getElementById("symbol").innerHTML = "<img src='libra.jpg'>";
+        } else if((month == 10 && (day >= 23 && day <=31)) || (month == 11 && (day >= 1 && day <= 21))) {
+          var Scorpio = "You are Scorpio. People of the Scorpio sign are brave people and faithful friends.";
+          document.getElementById("message").innerHTML = Scorpio;
+          document.getElementById("symbol").innerHTML = "<img src='scorpio.jpg'>";
+        } else if((month == 11 && (day >= 22 && day <=30)) || (month == 12 && (day >= 1 && day <= 21))) {
+          var Sagittarius = "You are Sagittarius. People of Sagittarius sign are very sociable and friendly.";
+          document.getElementById("message").innerHTML = Sagittarius;
+          document.getElementById("symbol").innerHTML = "<img src='sagittarius.jpg'>";
+        } else if((month == 12 && (day >= 22 && day <=31)) || (month == 1 && (day >= 1 && day <= 19))) {
+          var Capricorn = "You are Capricorn. People of Capricorn sign are cautious, their sight is directed towards the future, and their feet stand firm on the ground.";
+          document.getElementById("message").innerHTML = Capricorn;
+          document.getElementById("symbol").innerHTML = "<img src='capricorn.jpg'>";
+        }
+        else {
+          alert("error");
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f6f1d3;
+      }
+      h2 {
+        color: purple;
+        font-size: 40px;
+        font-family: monospace;
+      }
+      p {
+        font-family: monospace;
+        color: blue;
+        font-size: 20px;
+      }
+      ::placeholder {
+        font-family: monospace;
+      }
+      input[type=button]{
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 8 8 8 8;
+        text-decoration: none;
+        margin: 2px 2px;
+        cursor: help;
+        font-family: monospace;
+        border-radius: 10px 10px 10px 10px;
+      }
+      input[type=button]:hover {
+        background-color: gray;
+      }
+      span{
+        font-family: monospace;
+        color: black;
+        font-size: 20px;
+      }
+      div {
+       text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Find Your Zodiac Sign!</h2>
+    <p>Enter your Numeric Birthday (ex. 10-31)</p>
+    <input id = "userMonth" type="text" placeholder="Month">
+    <input id = "userDay" type="text" placeholder="Day">
+    <input type="button" value="Enter" onclick="fortune()">
+    <br>
+    <div><span id = "symbol"></span>
+    <br>
+    <span id = "message"></span></div>
+  </body>
+</html>
